@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<base href="https://fs8.formsite.com/1GNJPX/" />
+<!-- <base href="https://fs8.formsite.com/1GNJPX/" /> -->
 <title>Telco Customer Churn</title>
-<link rel="stylesheet" media="all" href="/include/form/fonts8.css?2172824315944" />
+<!-- <link rel="stylesheet" media="all" href="/include/form/fonts8.css?2172824315944" />
 <link rel="stylesheet" media="all" href="/include/form/screen8.css?2172824315944" />
 <link rel="stylesheet" media="print" href="/include/form/print8.css?2172824315944" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<link rel="stylesheet" media="screen" href="/include/form/responsive8.css?2172824315944" />
+<link rel="stylesheet" media="screen" href="/include/form/responsive8.css?2172824315944" /> -->
 <style media="all">
 /* LOOK AND FEEL */
 body {
@@ -309,9 +309,9 @@ tr.highlight td {
 	background: #1282a2;
 }
 </style>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-<script src="/include/form/form8.js?2172824315944"></script>
+<script src="/include/form/form8.js?2172824315944"></script> -->
 </head>
 <body>
 <form action="{{ url_for('predict')}}"method="post">
@@ -348,8 +348,9 @@ tr.highlight td {
 <div id="q43" class="q required">
     <a class="item_anchor" name="ItemAnchor6"></a>
     <label class="question top_question" for="RESULT_TextField-6">Tenure&nbsp;<b class="icon_required" style="color:#F00">*</b></label>
-    <input type="text" name="RESULT_TextField-6" class="text_field" id="RESULT_TextField-6"  size="60" value="50" />
-    </div>
+    <!-- <input type="text" name="RESULT_TextField-6" class="text_field" id="RESULT_TextField-6"  size="60" value="50" /> -->
+    <input type="text" name="RESULT_TextField-6" class="text_field" id="RESULT_TextField-6"  size="60" />  
+</div>
 
 <div class="clear"></div>
 
@@ -357,7 +358,7 @@ tr.highlight td {
 <a class="item_anchor" name="ItemAnchor4"></a>
 <span class="question top_question">Does the customer qualify as a Senior citizen (>=65)&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
 <table class="inline_grid choices">
-<tr><td><input type="radio" name="RESULT_RadioButton-4" class="multiple_choice" id="RESULT_RadioButton-4_0" value="Radio-0" /><label for="RESULT_RadioButton-4_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-4" class="multiple_choice" id="RESULT_RadioButton-4_1" value="Radio-1" /><label for="RESULT_RadioButton-4_1">No</label></tr>
+<tr><td><input type="radio" name="RESULT_RadioButton-4" class="multiple_choice" id="RESULT_RadioButton-4_0" value="0" /><label for="RESULT_RadioButton-4_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-4" class="multiple_choice" id="RESULT_RadioButton-4_1" value="1" /><label for="RESULT_RadioButton-4_1">No</label></tr>
 </table>
 </div>
 
@@ -367,7 +368,7 @@ tr.highlight td {
 <a class="item_anchor" name="ItemAnchor5"></a>
 <span class="question top_question">Does the customer have a partner with whom they utilize Telco services?&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
 <table class="inline_grid choices">
-<tr><td><input type="radio" name="RESULT_RadioButton-5" class="multiple_choice" id="RESULT_RadioButton-5_0" value="Radio-0" /><label for="RESULT_RadioButton-5_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-5" class="multiple_choice" id="RESULT_RadioButton-5_1" value="Radio-1" /><label for="RESULT_RadioButton-5_1">No</label></tr>
+<tr><td><input type="radio" name="RESULT_RadioButton-5" class="multiple_choice" id="RESULT_RadioButton-5_0" value="0" /><label for="RESULT_RadioButton-5_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-5" class="multiple_choice" id="RESULT_RadioButton-5_1" value="1" /><label for="RESULT_RadioButton-5_1">No</label></tr>
 </table>
 </div>
 
@@ -377,7 +378,7 @@ tr.highlight td {
     <a class="item_anchor" name="ItemAnchor3"></a>
     <span class="question top_question">Gender that customer identifies with?&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
     <table class="inline_grid choices">
-    <tr><td><input type="radio" name="RESULT_RadioButton-3" class="multiple_choice" id="RESULT_RadioButton-3_0" value="Radio-0" checked /><label for="RESULT_RadioButton-3_0">Male</label><td><input type="radio" name="RESULT_RadioButton-3" class="multiple_choice" id="RESULT_RadioButton-3_1" value="Radio-1" /><label for="RESULT_RadioButton-3_1">Female</label></tr>
+    <tr><td><input type="radio" name="RESULT_RadioButton-3" class="multiple_choice" id="RESULT_RadioButton-3_0" value="0" checked /><label for="RESULT_RadioButton-3_0">Male</label><td><input type="radio" name="RESULT_RadioButton-3" class="multiple_choice" id="RESULT_RadioButton-3_1" value="1" /><label for="RESULT_RadioButton-3_1">Female</label></tr>
     </table>
     </div>
 
@@ -395,14 +396,14 @@ tr.highlight td {
     <button type="submit" class="submit_button">Predict</button>
     </div>
 
-<div id="q79" class="q full_width">
-<a class="item_anchor" name="ItemAnchor16"></a>
-<div class="full_width_space"><div>
-<div style="text-align: left;"><span style="font-size: 13px; font-family: 'Roboto Slab', serif;">{{ prediction_text }}</span></div>
-</div></div>
-</div>
-
-<div class="clear"></div>
+<!-- <div id="q79" class="q full_width"> -->
+<!-- <a class="item_anchor" name="ItemAnchor16"></a> -->
+<!-- <div class="full_width_space"><div> -->
+<!-- <div style="text-align: left;"><span style="font-size: 13px; font-family: 'Roboto Slab', serif;">{{ prediction_text }}</span></div> -->
+<!-- </div></div> -->
+<!-- </div> -->
+{{ prediction_text }}
+<!-- <div class="clear"></div> -->
 
 <div style="position:relative;font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:12px;line-height:36px;text-align:center;background-color:#FAFAFA;height:35px;margin-top:10px;overflow:hidden;">
 <span style="display:inline;margin-right:10px;line-height:38px;font-family:Questrial,sans-serif;text-transform:uppercase;color:#A3A3A3;font-size:10px;letter-spacing:2px;white-space:nowrap;">MODEL AND UI CREATED, DESIGNED AND DEPLOYED BY MEGHNA ASHOK @ 2022</span></a>

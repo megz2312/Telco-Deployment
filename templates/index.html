@@ -7,6 +7,7 @@
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
 </head>
 <body>
     <div class="prediction">
@@ -21,14 +22,14 @@
       			<option value="0">Female</option>
     		</select>
     		<br>
-		<label for="SeniorCitizen">Senior Citizen</label>
-    		<select id="SeniorCitizen" name="SeniorCitizen" required="required">
+		<label for="seniorcitizen">Senior Citizen</label>
+    		<select id="seniorcitizen" name="seniorcitizen" required="required">
       			<option value="0">No</option>
       			<option value="1">Yes</option>
     		</select>
     		<br>
-    		<label for="Partner">Partner</label>
-    		<select id="Partner" name="Partner" required="required">
+    		<label for="partner">Partner</label>
+    		<select id="partner" name="partner" required="required">
       			<option value="0">No</option>
       			<option value="1">Yes</option>
     		</select>

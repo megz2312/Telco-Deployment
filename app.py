@@ -10,7 +10,7 @@ from collections.abc import Sequence
 app = Flask(__name__)
 model = pickle.load(open('logreg.pkl', 'rb'))
 # cols=['gender', 'SeniorCitizen', 'Partner','tenure','PhoneService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection','TechSupport', 'PaperlessBilling','Churn', 'InternetService_DSL','InternetService_Fiber optic']
-cols=['tenure','SeniorCitizen', 'Partner','gender']
+cols=['tenure','seniorCitizen', 'partner','gender']
 @app.route('/')
 def home():
     return render_template('index.html')

@@ -21,15 +21,18 @@ def predict():
     feature_list = list(feature_list.values())
     feature_list = list(map(int, feature_list))
     final_features = np.array(feature_list).reshape(1, 4) 
-    
+    k=str(final_features)
     prediction = model.predict(final_features)
     output = int(prediction[0])
+    
     if output == 1:
         text = "Churn"
     else:
         text = "No Churn"
 
-    return render_template('index.html', prediction_text='Employee is more likely to {}'.format(text))
+#     return render_template('index.html', prediction_text='Employee is more likely to {}'.format(text))
+    return render_template('index.html', prediction_text='Employee is more likely to {}'.format(k))
+
 
 
 if __name__ == "__main__":

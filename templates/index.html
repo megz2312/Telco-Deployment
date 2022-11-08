@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>ML Deployment using Heroku</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="prediction">
+        <h1>Customer Churn Prediction</h1>
+        <form action="{{ url_for('predict')}}"method="post">
+		<label for="tenure">Tenure</label>
+		<input type="text" id="tenure" name="tenure" required="required">
+		<br>
+    		<label for="gender">Gender</label>
+    		<select id="gender" name="gender" required="required">
+      			<option value="1">Male</option>
+      			<option value="0">Female</option>
+    		</select>
+    		<br>
+		<label for="SeniorCitizen">Senior Citizen</label>
+    		<select id="SeniorCitizen" name="SeniorCitizen" required="required">
+      			<option value="0">No</option>
+      			<option value="1">Yes</option>
+    		</select>
+    		<br>
+    		<label for="Partner">Partner</label>
+    		<select id="Partner" name="Partner" required="required">
+      			<option value="0">No</option>
+      			<option value="1">Yes</option>
+    		</select>
+    		<br>
+        	<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+
+       <br>
+       <b>{{ prediction_text }}</b>
+    </div>
+</body>
+</html>

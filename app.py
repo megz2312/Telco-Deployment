@@ -43,45 +43,45 @@ if __name__ == "__main__":
 
 
 
-import json
-import os
-from flask import Flask,jsonify,request
-from flask_cors import CORS
-from predictor.py import logistic_regression_model
+# import json
+# import os
+# from flask import Flask,jsonify,request
+# from flask_cors import CORS
+# from predictor.py import logistic_regression_model
 
-app = Flask(__name__)
-CORS(app)
-@app.route("/logistic_regression/",methods=['GET'])
-def return_arg():
-    gender = request.args.get('gender')
-    seniorcitizen = request.args.get('seniorcitizen')
-    partner = request.args.get('partner')
-    dependents = request.args.get('dependents')
-    tenure = request.args.get('tenure')
-    phoneservice = request.args.get('pgoneservice')
-    onlinesecurity = request.args.get('onlinesecurity')
-    onlinebackup = request.args.get('onlinebackup')
-    deviceprotection = request.args.get('deviceprotection')
-    techsupport = request.args.get('techsupport')
-    paperlessbilling = request.args.get('paperlessbilling')
-    monthlycharges = request.args.get('monthlycharges')
-    totalcharges = request.args.get('totalcharges')
-    churn = request.args.get('churn')
-    internetservice_dsl = request.args.get('internetservice_dsl')
-    internetservice_fiber_optic = request.args.get('internetservice_fiber optic')
-    contract_month_to_month = request.args.get('contract_month-to-month')
-    contract_one_year = request.args.get('contract_one year')
+# app = Flask(__name__)
+# CORS(app)
+# @app.route("/logistic_regression/",methods=['GET'])
+# def return_arg():
+#     gender = request.args.get('gender')
+#     seniorcitizen = request.args.get('seniorcitizen')
+#     partner = request.args.get('partner')
+#     dependents = request.args.get('dependents')
+#     tenure = request.args.get('tenure')
+#     phoneservice = request.args.get('pgoneservice')
+#     onlinesecurity = request.args.get('onlinesecurity')
+#     onlinebackup = request.args.get('onlinebackup')
+#     deviceprotection = request.args.get('deviceprotection')
+#     techsupport = request.args.get('techsupport')
+#     paperlessbilling = request.args.get('paperlessbilling')
+#     monthlycharges = request.args.get('monthlycharges')
+#     totalcharges = request.args.get('totalcharges')
+#     churn = request.args.get('churn')
+#     internetservice_dsl = request.args.get('internetservice_dsl')
+#     internetservice_fiber_optic = request.args.get('internetservice_fiber optic')
+#     contract_month_to_month = request.args.get('contract_month-to-month')
+#     contract_one_year = request.args.get('contract_one year')
 
-    logr = logistic_regression_model.predict(gender,seniorcitizen,partner,dependents,tenure,phoneservice,onlinesecurity,onlinebackup,deviceprotection,techsupport,paperlessbilling,monthlycharges,totalcharges,internetservice_dsl,internetservice_fiber_optic,contract_month_to_month,contract_one_year) 
-    price_dict = {
-                    'model':'logreg',
-                    'churn?': logr,
-                    }
-    return jsonify(price_dict)
+#     logr = logistic_regression_model.predict(gender,seniorcitizen,partner,dependents,tenure,phoneservice,onlinesecurity,onlinebackup,deviceprotection,techsupport,paperlessbilling,monthlycharges,totalcharges,internetservice_dsl,internetservice_fiber_optic,contract_month_to_month,contract_one_year) 
+#     price_dict = {
+#                     'model':'logreg',
+#                     'churn?': logr,
+#                     }
+#     return jsonify(price_dict)
 
-@app.route("/",methods=['GET'])
-def default():
-  return "<h1> Welcome to bitcoin price predictor <h1>"
+# @app.route("/",methods=['GET'])
+# def default():
+#   return "<h1> Welcome to bitcoin price predictor <h1>"
 
-if __name__ == "__main__":
-    app.run() 
+# if __name__ == "__main__":
+#     app.run() 

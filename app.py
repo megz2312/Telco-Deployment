@@ -20,7 +20,7 @@ def predict():
     feature_list = request.form.to_dict()
     feature_list = list(feature_list.values())
     feature_list = list(map(int, feature_list))
-    final_features = np.array(feature_list).reshape(1, 12) 
+    final_features = np.array(feature_list).reshape(1, 4) 
     
     prediction = model.predict(final_features)
     output = int(prediction[0])
@@ -29,7 +29,7 @@ def predict():
     else:
         text = "No Churn"
 
-    return render_template('index.html', prediction_text='Employee Income is {}'.format(text))
+    return render_template('index.html', prediction_text='Employee is more likely to {}'.format(text))
 
 
 if __name__ == "__main__":

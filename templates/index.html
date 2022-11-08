@@ -314,7 +314,8 @@ tr.highlight td {
 <script src="/include/form/form8.js?2172824315944"></script>
 </head>
 <body>
-<form method="post" id="FSForm" action="{{ url_for('predict')}}" enctype="application/x-www-form-urlencoded" onsubmit="return Vromansys.Form.processSubmit(this);">
+<form action="{{ url_for('predict')}}"method="post">
+<!-- <form method="post" id="FSForm" action="{{ url_for('predict')}}" enctype="application/x-www-form-urlencoded" onsubmit="return Vromansys.Form.processSubmit(this);"> -->
 <!-- BEGIN_ITEMS -->
 <div class="form_table">
 
@@ -389,6 +390,11 @@ tr.highlight td {
 
 <div class="clear"></div>
 
+<div class="outside_container">
+    <!-- <div class="buttons_reverse"><input type="submit" name="Submit" value="Make Prediction" class="submit_button" id="FSsubmit" /></div> -->
+    <button type="submit" class="submit_button">Predict</button>
+    </div>
+
 <div id="q79" class="q full_width">
 <a class="item_anchor" name="ItemAnchor16"></a>
 <div class="full_width_space"><div>
@@ -403,63 +409,6 @@ tr.highlight td {
 </div>
 </div>
 <!-- END_ITEMS -->
-<div class="outside_container">
-<div class="buttons_reverse"><input type="submit" name="Submit" value="Make Prediction" class="submit_button" id="FSsubmit" /></div>
-</div>
 </form>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html >
-<head>
-    <meta charset="UTF-8">
-    <title>ML Deployment using Heroku</title>
-    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
-</head>
-<body>
-    <div class="prediction">
-        <h1>Customer Churn Prediction</h1>
-        <form action="{{ url_for('predict')}}"method="post">
-		<label for="tenure">Tenure</label>
-		<input type="text" id="tenure" name="tenure" required="required">
-		<br>
-    		<label for="gender">Gender</label>
-    		<select id="gender" name="gender" required="required">
-      			<option value="1">Male</option>
-      			<option value="0">Female</option>
-    		</select>
-    		<br>
-		<label for="seniorcitizen">Senior Citizen</label>
-    		<select id="seniorcitizen" name="seniorcitizen" required="required">
-      			<option value="0">No</option>
-      			<option value="1">Yes</option>
-    		</select>
-    		<br>
-    		<label for="partner">Partner</label>
-    		<select id="partner" name="partner" required="required">
-      			<option value="0">No</option>
-      			<option value="1">Yes</option>
-    		</select>
-    		<br>
-        	<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-        </form>
-
-       <br>
-       <b>{{ prediction_text }}</b>
-    </div>
-</body>
-</html> -->

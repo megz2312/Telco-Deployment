@@ -6,6 +6,7 @@ import pickle
 
 app = Flask(__name__)
 model = pickle.load(open('logreg.pkl', 'rb'))
+cols=['gender', 'SeniorCitizen', 'Partner','tenure','PhoneService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection','TechSupport', 'PaperlessBilling','Churn', 'InternetService_DSL','InternetService_Fiber optic']
 
 @app.route('/')
 def home():

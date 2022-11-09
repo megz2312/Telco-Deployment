@@ -235,7 +235,7 @@ tr.highlight td {
 	border-radius: 2px;
 	text-align: center;
     font-family:'Roboto Slab',serif;
-	font-size: 14px;
+	font-size: 17px;
 	font-weight: normal;
 	min-width: 20%;
     padding: 14px 26px;
@@ -318,7 +318,7 @@ tr.highlight td {
 img.ddd {
     width: 98%;
     padding-top: 15px;
-    height: 145%;
+    height: 55%;
 }
 
 table.inline_grid.choices {
@@ -366,7 +366,7 @@ table.inline_grid.choices {
     <a class="item_anchor" name="ItemAnchor6"></a>
     <label class="question top_question" for="RESULT_TextField-6">How many tenure years has the customer been a Telco customer?&nbsp;<b class="icon_required" style="color:#F00">*</b></label><br/><br/>
 
-    <input type="text" name="RESULT_TextField-6" class="text_field" id="RESULT_TextField-6"  size="60" />  
+    <input type="text" name="RESULT_TextField-6" class="text_field" id="RESULT_TextField-6"  size="60" value="50" />  
 </div>
 
 <div class="clear"></div>
@@ -375,7 +375,7 @@ table.inline_grid.choices {
 <a class="item_anchor" name="ItemAnchor4"></a>
 <span class="question top_question">Does the customer qualify as a Senior citizen (>=65)&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
 <table class="inline_grid choices">
-<tr><td><input type="radio" name="RESULT_RadioButton-4" class="multiple_choice" id="RESULT_RadioButton-4_0" value="0" /><label for="RESULT_RadioButton-4_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-4" class="multiple_choice" id="RESULT_RadioButton-4_1" value="1" /><label for="RESULT_RadioButton-4_1">No</label></tr>
+<tr><td><input type="radio" name="RESULT_RadioButton-4" class="multiple_choice" id="RESULT_RadioButton-4_0" value="1" /><label for="RESULT_RadioButton-4_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-4" class="multiple_choice" id="RESULT_RadioButton-4_1" value="0" /><label for="RESULT_RadioButton-4_1">No</label></tr>
 </table>
 </div>
 
@@ -385,7 +385,7 @@ table.inline_grid.choices {
 <a class="item_anchor" name="ItemAnchor5"></a>
 <span class="question top_question">Does the customer have a partner with whom they utilize Telco services?&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
 <table class="inline_grid choices">
-<tr><td><input type="radio" name="RESULT_RadioButton-5" class="multiple_choice" id="RESULT_RadioButton-5_0" value="0" /><label for="RESULT_RadioButton-5_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-5" class="multiple_choice" id="RESULT_RadioButton-5_1" value="1" /><label for="RESULT_RadioButton-5_1">No</label></tr>
+<tr><td><input type="radio" name="RESULT_RadioButton-5" class="multiple_choice" id="RESULT_RadioButton-5_0" value="1" /><label for="RESULT_RadioButton-5_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-5" class="multiple_choice" id="RESULT_RadioButton-5_1" value="0" /><label for="RESULT_RadioButton-5_1">No</label></tr>
 </table>
 </div>
 
@@ -395,11 +395,93 @@ table.inline_grid.choices {
     <a class="item_anchor" name="ItemAnchor3"></a>
     <span class="question top_question">Gender that customer identifies with?&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
     <table class="inline_grid choices">
-    <tr><td><input type="radio" name="RESULT_RadioButton-3" class="multiple_choice" id="RESULT_RadioButton-3_0" value="0" checked /><label for="RESULT_RadioButton-3_0">Male</label><td><input type="radio" name="RESULT_RadioButton-3" class="multiple_choice" id="RESULT_RadioButton-3_1" value="1" /><label for="RESULT_RadioButton-3_1">Female</label></tr>
+    <tr><td><input type="radio" name="RESULT_RadioButton-3" class="multiple_choice" id="RESULT_RadioButton-3_0" value="1" checked /><label for="RESULT_RadioButton-3_0">Male</label><td><input type="radio" name="RESULT_RadioButton-3" class="multiple_choice" id="RESULT_RadioButton-3_1" value="0" /><label for="RESULT_RadioButton-3_1">Female</label></tr>
     </table>
     </div>
 
+
 <div class="clear"></div>
+
+<div id="q64" class="q required">
+<a class="item_anchor" name="ItemAnchor7"></a>
+<span class="question top_question">Has the customer opted for Telco's phone services?&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
+<table class="inline_grid choices">
+<tr><td><input type="radio" name="RESULT_RadioButton-7" class="multiple_choice" id="RESULT_RadioButton-7_0" value="1" /><label for="RESULT_RadioButton-7_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-7" class="multiple_choice" id="RESULT_RadioButton-7_1" value="0" /><label for="RESULT_RadioButton-7_1">No</label></tr>
+</table>
+</div>
+
+<div class="clear"></div>
+
+<div id="q65" class="q required">
+<a class="item_anchor" name="ItemAnchor8"></a>
+<span class="question top_question">Has the customer opted for Telco's online security service?&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
+<table class="inline_grid choices">
+<tr><td><input type="radio" name="RESULT_RadioButton-8" class="multiple_choice" id="RESULT_RadioButton-8_0" value="1" checked /><label for="RESULT_RadioButton-8_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-8" class="multiple_choice" id="RESULT_RadioButton-8_1" value="0" /><label for="RESULT_RadioButton-8_1">No</label></tr>
+</table>
+</div>
+
+<div class="clear"></div>
+
+<div id="q66" class="q required">
+<a class="item_anchor" name="ItemAnchor9"></a>
+<span class="question top_question">Has the customer opted for Telco's online backup service?&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
+<table class="inline_grid choices">
+<tr><td><input type="radio" name="RESULT_RadioButton-9" class="multiple_choice" id="RESULT_RadioButton-9_0" value="1" checked /><label for="RESULT_RadioButton-9_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-9" class="multiple_choice" id="RESULT_RadioButton-9_1" value="0" /><label for="RESULT_RadioButton-9_1">No</label></tr>
+</table>
+</div>
+
+<div class="clear"></div>
+
+<div id="q67" class="q required">
+<a class="item_anchor" name="ItemAnchor10"></a>
+<span class="question top_question">Has the customer opted for Telco's device protection&nbsp;service?&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
+<table class="inline_grid choices">
+<tr><td><input type="radio" name="RESULT_RadioButton-10" class="multiple_choice" id="RESULT_RadioButton-10_0" value="1" checked /><label for="RESULT_RadioButton-10_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-10" class="multiple_choice" id="RESULT_RadioButton-10_1" value="0" /><label for="RESULT_RadioButton-10_1">No</label></tr>
+</table>
+</div>
+
+<div class="clear"></div>
+
+<div id="q68" class="q required">
+<a class="item_anchor" name="ItemAnchor11"></a>
+<span class="question top_question">Has the customer opted for Telco's tech support service?&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
+<table class="inline_grid choices">
+<tr><td><input type="radio" name="RESULT_RadioButton-11" class="multiple_choice" id="RESULT_RadioButton-11_0" value="1" checked /><label for="RESULT_RadioButton-11_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-11" class="multiple_choice" id="RESULT_RadioButton-11_1" value="0" /><label for="RESULT_RadioButton-11_1">No</label></tr>
+</table>
+</div>
+
+<div class="clear"></div>
+
+<div id="q69" class="q required">
+<a class="item_anchor" name="ItemAnchor12"></a>
+<span class="question top_question">Has the customer opted for Telco's paperless billing service?&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
+<table class="inline_grid choices">
+<tr><td><input type="radio" name="RESULT_RadioButton-12" class="multiple_choice" id="RESULT_RadioButton-12_0" value="1" checked /><label for="RESULT_RadioButton-12_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-12" class="multiple_choice" id="RESULT_RadioButton-12_1" value="0" /><label for="RESULT_RadioButton-12_1">No</label></tr>
+</table>
+</div>
+
+<div class="clear"></div>
+
+<div id="q70" class="q required">
+<a class="item_anchor" name="ItemAnchor13"></a>
+<span class="question top_question">Has the customer opted for Telco's DSL Internet service?&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
+<table class="inline_grid choices">
+<tr><td><input type="radio" name="RESULT_RadioButton-13" class="multiple_choice" id="RESULT_RadioButton-13_0" value="1" checked /><label for="RESULT_RadioButton-13_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-13" class="multiple_choice" id="RESULT_RadioButton-13_1" value="0" /><label for="RESULT_RadioButton-13_1">No</label></tr>
+</table>
+</div>
+
+<div class="clear"></div>
+
+<div id="q71" class="q required">
+<a class="item_anchor" name="ItemAnchor14"></a>
+<span class="question top_question">Has the customer opted for Telco's Fiber Optics Internet service?&nbsp;<b class="icon_required" style="color:#F00">*</b></span>
+<table class="inline_grid choices">
+<tr><td><input type="radio" name="RESULT_RadioButton-14" class="multiple_choice" id="RESULT_RadioButton-14_0" value="1" checked /><label for="RESULT_RadioButton-14_0">Yes</label><td><input type="radio" name="RESULT_RadioButton-14" class="multiple_choice" id="RESULT_RadioButton-14_1" value="0" /><label for="RESULT_RadioButton-14_1">No</label></tr>
+</table>
+</div>
+
+<div class="clear"></div>
+
 
 <div class="outside_container">
 <!--     <div class="buttons_reverse"><input type="submit" name="Submit" value="Make Prediction" class="submit_button" id="FSsubmit" /></div> -->
@@ -411,7 +493,7 @@ table.inline_grid.choices {
 
 <div id="q73" class="q full_width">
 <a class="item_anchor" name="ItemAnchor15"></a>
-<div class="segment_header" style="width:auto;text-align:Left;"><h1 style="font-size:20px;font-family:'Roboto Slab',serif;padding:20px 1em ;">{{ prediction_text }}</h1></div>
+<div class="segment_header" style="width:auto;text-align:center;"><h1 style="font-size:16px;font-family:'Roboto Slab',serif;padding:20px 1em ;">{{ prediction_text }}</h1></div>
 </div>
       
 <!-- <div id="q79" class="q full_width">

@@ -30,10 +30,10 @@ def predict():
     else:
         text = "\'Not Churn\'"
     
-    prediction_text='XGBOOST Model results : Employee is more likely to '+text
+    prediction_text='XGBOOST Model results : Employee is more likely to '+str(text)
     pred=prediction_text+'     '+k
 #     return render_template('index.html', prediction_text='Employee is more likely to {}'.format(text))
-    return render_template('index.html', pred)
+    return render_template('index.html', prediction_text=pred)
 
 
 

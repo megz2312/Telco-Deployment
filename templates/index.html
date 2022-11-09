@@ -47,10 +47,17 @@ body {
 .outside a:visited {
 	color: #E8BC63;
 }
-
+div#q76 {
+    margin-left: 4px;
+    margin-right: 4px
+}
+  div#q73 {
+    margin-left: 4px;
+    margin-right: 4px
+}
 .segment_header {
 	width: auto;
-	margin: 1px;
+	margin: 10px;
 	color: #FFFFFF;
 	background: #1282A2;
 	background-size: cover;
@@ -65,8 +72,9 @@ body {
 	font-family: 'Roboto',sans-serif;
 }
 
+  
 .q {
-	padding: 10px;
+	/* padding: 10px; */
 	margin-bottom: 15px;
 	margin-left: 15px;
 	/* float: left; */
@@ -230,7 +238,7 @@ tr.highlight td {
 	font-size: 14px;
 	font-weight: normal;
 	min-width: 20%;
-	padding: 10px 20px;
+    padding: 14px 26px;
 	text-transform: none;
 	box-shadow: none;
 }
@@ -278,6 +286,7 @@ tr.highlight td {
 	background: #001F54;
 	background-size: auto;
 	border-color: #BBBBBB;
+   
 }
 
 .q .number_scale td input:checked + label {
@@ -312,6 +321,11 @@ img.ddd {
     height: 145%;
 }
 
+table.inline_grid.choices {
+    font-size: 13px;
+    color: #575B66;
+}
+  
 </style>
 <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
@@ -327,14 +341,14 @@ img.ddd {
 
 <div id="q39" class="q full_width">
 <a class="item_anchor" name="ItemAnchor0"></a>
-<div style="text-align:left;"><img src="https://www.voxco.com/wp-content/uploads/2021/09/Everything-you-need-to-know-about-Customer-Churn1.jpg" alt="" style="/* width: 98%; *//* align-self: center; */" class="ddd"></div>
+<div style="text-align:left;"><img src="https://www.pointillist.com/wp-content/uploads/2017/11/Running-4-the-Exit-2-844x422.png" alt="" style="/* width: 98%; height: 58%; *//* align-self: center; */" class="ddd"></div>
 </div>
 
 <div class="clear"></div>
 
 <div id="q76" class="q full_width">
 <a class="item_anchor" name="ItemAnchor1"></a>
-<div class="segment_header" style="width:auto;text-align:Left;"><h1 style="font-size:24px;font-family:'Roboto Slab',serif;padding:20px 1em ;">TELCO CUSTOMER CHURN PREDICTION</h1></div>
+<div class="segment_header" style="width:auto;text-align:Left;"><h1 style="font-size:28px;font-family:'Roboto Slab',serif;padding:20px 1em ;">TELCO CUSTOMER CHURN PREDICTION</h1></div>
 </div>
 
 <div class="clear"></div>
@@ -342,17 +356,16 @@ img.ddd {
 <div id="q77" class="q full_width">
 <a class="item_anchor" name="ItemAnchor2"></a>
 <div class="full_width_space"><div>
-<div style="text-align: left;"><span style="font-size: 13px; font-family: 'Roboto Slab', serif;">Enter the customer's demographic and product usage information to determine the likelihood of Churn.</span></div>
+  <div style="text-align: left;padding-left:2px;"><span style="font-size: 16px; font-family: 'Roboto',sans-serif; color: #1282A2">Enter customer's demographic and product usage information to determine likelihood of churn :</i></span></div>
 </div></div>
 </div>
 
 <div class="clear"></div>
-
-
+<br/>
 <div id="q43" class="q required">
     <a class="item_anchor" name="ItemAnchor6"></a>
-    <label class="question top_question" for="RESULT_TextField-6">Tenure&nbsp;<b class="icon_required" style="color:#F00">*</b></label>
-    <!-- <input type="text" name="RESULT_TextField-6" class="text_field" id="RESULT_TextField-6"  size="60" value="50" /> -->
+    <label class="question top_question" for="RESULT_TextField-6">How many tenure years has the customer been a Telco customer?&nbsp;<b class="icon_required" style="color:#F00">*</b></label><br/><br/>
+
     <input type="text" name="RESULT_TextField-6" class="text_field" id="RESULT_TextField-6"  size="60" />  
 </div>
 
@@ -388,22 +401,23 @@ img.ddd {
 
 <div class="clear"></div>
 
-<div id="q73" class="q full_width">
-<a class="item_anchor" name="ItemAnchor15"></a>
-<div class="segment_header" style="width:auto;text-align:Left;"><h1 style="font-size:24px;font-family:'Roboto Slab',serif;padding:20px 1em ;">XGBOOST Model Results :</h1></div>
-</div>
-
-<div class="clear"></div>
-
 <div class="outside_container">
 <!--     <div class="buttons_reverse"><input type="submit" name="Submit" value="Make Prediction" class="submit_button" id="FSsubmit" /></div> -->
-    <button type="submit" class="submit_button">Predict</button>
+    <button type="submit" class="submit_button">PREDICT CHURN
     </div>
 
-<div id="q79" class="q full_width"> -->
+ 
+<div class="clear"></div>
+
+<div id="q73" class="q full_width">
+<a class="item_anchor" name="ItemAnchor15"></a>
+<div class="segment_header" style="width:auto;text-align:Left;"><h1 style="font-size:20px;font-family:'Roboto Slab',serif;padding:20px 1em ;">{{ prediction_text }}</h1></div>
+</div>
+      
+<!-- <div id="q79" class="q full_width">
 <a class="item_anchor" name="ItemAnchor16"></a>
 <div class="full_width_space"><div>
-<div style="text-align: left;"><span style="font-size: 13px; font-family: 'Roboto Slab', serif;">{{ prediction_text }}</span></div>
+<div style="text-align: left;"><span style="font-size: 15px; font-family: 'Roboto Slab', serif;color:black;">{{ prediction_text }}</span></div> -->
 </div></div>
 <!-- <!-- </div> -->
 <!-- {{ prediction_text }} -->

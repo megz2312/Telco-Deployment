@@ -8,7 +8,8 @@ from collections.abc import MutableMapping
 from collections.abc import Sequence
 
 app = Flask(__name__)
-model = pickle.load(open('logreg.pkl', 'rb'))
+# model = pickle.load(open('logreg.pkl', 'rb'))
+model = pickle.load(open('xgmodel.pkl', 'rb'))
 cols=['tenure', 'SeniorCitizen', 'Partner','gender','PhoneService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'PaperlessBilling', 'InternetService_DSL', 'InternetService_Fiber optic']
 @app.route('/')
 def home():
@@ -30,10 +31,10 @@ def predict():
         text = "\'Not Churn\'"
     
     prediction_texts='XGBOOST Model results : Employee is more likely to '+str(text)
-    pred=prediction_texts+'     '+k
+#     pred=prediction_texts+'     '+k
 #     pred=prediction_text
 #     return render_template('index.html', prediction_text='Employee is more likely to {}'.format(text))
-    return render_template('index.html', prediction_text=k)
+    return render_template('index.html', prediction_text=prediction_texts)
 
 
 
